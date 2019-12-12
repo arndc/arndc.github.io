@@ -1,0 +1,9 @@
+node_modules/
+yarn.lock
+
+# Jetbrains
+.idea/
+*.iml
+
+# VS Code
+.vscode/*
