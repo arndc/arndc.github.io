@@ -1,0 +1,12 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    display: block;
+    background: #233146;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    color: #f5f5f5;
+}
+
+.colorAccent {
+    color: rgb(75, 249, 118);
+}
