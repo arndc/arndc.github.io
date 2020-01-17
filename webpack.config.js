@@ -1,4 +1,5 @@
 const path = require('path');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -27,11 +28,16 @@ module.exports = {
         ],
     },
     plugins: [
+        new CleanWebpackPlugin({
+            cleanOnceBeforeBuildPatterns: ['**/*', '!.git', '!.gitignore'],
+        }),
         new HtmlWebpackPlugin({
             template: './index.html',
             favicon: './favicon.ico',
         }),
         new CopyPlugin([
+            'README.md',
+            'CNAME',
             { from: './assets/particles.json', to: './particles.json' },
         ]),
     ],
