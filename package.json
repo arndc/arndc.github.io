@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Personal site of Arne De Cock",
   "homepage": "https://arnedc.me",
+  "author": "Arne De Cock",
   "private": true,
   "main": "index.js",
   "repository": {
