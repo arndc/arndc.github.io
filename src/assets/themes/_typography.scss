@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "Lato";
+  src: url("../typography/lato/Lato-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Lato Light";
+  src: url("../typography/lato/Lato-Light.ttf") format("truetype");
+}
+
+$dc-font-family: Lato, Arial, Helvetica, sans-serif;
+$dc-font-family-light: "Lato Light", Arial, Helvetica, sans-serif;
