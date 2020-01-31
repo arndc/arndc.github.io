@@ -1,69 +1,52 @@
 <template>
-  <div>
-    <div id="particles-js"></div>
-    <main>
-      <h1>
-        <span class="colorAccent code">></span> arnedc<span class="colorAccent">.</span>me <span
-          class="colorAccent blink">_</span>
-      </h1>
-    </main>
-  </div>
+  <main class="hero is-fullheight has-background-primary">
+    <section class="hero-body container">
+      <h1 class="dc-logo">ARNE<small>.</small>DC</h1>
+    </section>
+  </main>
 </template>
 
-<script>
+<script lang="ts">
 
-    import { Component, Vue } from 'vue-property-decorator';
-    import 'particles.js';
+    import { Component, Vue } from 'vue-property-decorator'
 
     @Component
-    export default class Home extends Vue {
-        created() {
-            particlesJS.load('particles-js', 'particles.json');
-        }
-    }
+    export default class Home extends Vue {}
 
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
   main {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    background-image: url("../assets/images/backgrounds/mountains.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
-  h1 {
-    font-size: 5rem;
-  }
+  .dc-logo {
+    $dc-padding-vertical: 0.615rem;
+    $dc-padding-horizontal: 2.615rem;
+    $dc-font-size: 3.21rem;
+    $dc-border-width: 0.1605rem;
 
-  .code {
-    font-family: Consolas, "Source Sans Pro", Helvetica, sans-serif;
-  }
+    padding: $dc-padding-vertical $dc-padding-horizontal;
+    color: white;
+    font-size: $dc-font-size;
+    font-family: $dc-font-family-light;
+    border: white $dc-border-width solid;
 
-  .blink {
-    animation: blink 1s step-start 0s infinite;
-    -webkit-animation: blink 1s step-start 0s infinite;
-  }
-
-  @keyframes blink {
-    50% {
-      opacity: 0.0;
+    @media only screen and (min-width: $tablet) {
+      padding: ($dc-padding-vertical * 2) ($dc-padding-horizontal * 2);
+      font-size: $dc-font-size * 2;
+      border-width: $dc-border-width * 2;
     }
-  }
 
-  @-webkit-keyframes blink {
-    50% {
-      opacity: 0.0;
+    small {
+      $dc-font-size: 32px;
+      font-size: $dc-font-size;
+
+      @media only screen and (min-width: $tablet) {
+        font-size: $dc-font-size * 2;
+      }
     }
-  }
-
-  #particles-js {
-    position: absolute;
-    width: 100%;
-    height: 100%;
   }
 </style>
