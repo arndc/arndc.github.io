@@ -8,4 +8,21 @@ html, body {
   height: 100%;
   display: block;
   font-family: $dc-font-family;
+  background-color: $background;
+}
+
+.has-text-primary-light {
+  color: $primary-light;
+}
+
+.has-text-primary-lighter {
+  color: $primary-lighter;
+}
+
+.dc-code {
+  font-family: Consolas, "Courier New", sans-serif;
+}
+
+.dc-hashtag {
+  color: $primary-lighter;
 }
