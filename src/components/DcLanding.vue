@@ -1,7 +1,7 @@
 <template>
   <main class="hero is-fullheight has-background-primary" :style="'background-image: url(' + backgroundImageSrc + ')'">
     <section class="hero-body container">
-      <h1 class="dc-logo">ARNE<small>.</small>DC</h1>
+      <h1 class="dc-logo" data-aos="zoom-out" data-aos-duration="1800">ARNE<small>.</small>DC</h1>
     </section>
   </main>
 </template>

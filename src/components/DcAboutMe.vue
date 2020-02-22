@@ -3,29 +3,29 @@
     <div class="hero-body is-paddingless">
       <div class="tile is-vertical has-text-centered">
 
-        <section class="dc-section">
+        <section class="dc-section" data-aos="fade-up">
           <h2 class="title dc-title">Bio</h2>
           <div class="dc-bio is-flex">
-            <figure class="image">
+            <figure class="image" data-aos="zoom-in-up" data-aos-anchor=".dc-bio">
               <img class="is-rounded" src="@/assets/images/me.jpg" alt="Me (Arne De Cock)">
             </figure>
             <div class="has-text-left dc-texts">
-              <p class="box">
+              <p class="box" data-aos="fade-up" data-aos-delay="400" data-aos-anchor=".dc-texts">
                 Hi, my name is Arne De Cock and welcome to my site
                 <font-awesome-icon class="dc-icon" :icon="['far', 'laugh-beam']" />
               </p>
-              <p class="box">
+              <p class="box" data-aos="fade-up" data-aos-delay="600" data-aos-anchor=".dc-texts">
                 I'm a developer by day
                 <font-awesome-icon class="dc-icon" :icon="['fa', 'sun']" />
                 <span class="dc-code has-text-weight-bold"> && </span>
                 also by night
                 <font-awesome-icon class="dc-icon" :icon="['fa', 'moon']" />
               </p>
-              <p class="box">
+              <p class="box" data-aos="fade-up" data-aos-delay="800" data-aos-anchor=".dc-texts">
                 Next to that I really love watching TV series, movies and playing games
                 <span class="dc-hashtag">#online #offline</span>
               </p>
-              <p class="box">
+              <p class="box" data-aos="fade-up" data-aos-delay="1000" data-aos-anchor=".dc-texts">
                 Oh yeah, one more thing. Be aware of my puns, they are on point!
                 <span class="dc-hashtag">#punmaster</span>
               </p>
@@ -33,7 +33,7 @@
           </div>
         </section>
 
-        <section class="dc-section">
+        <section class="dc-section" data-aos="fade-up" data-aos-duration="800">
           <h2 class="title dc-title">Trademarks</h2>
           <div class="dc-container is-fullwidth">
             <div class="columns">
