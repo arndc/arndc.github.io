@@ -61,7 +61,7 @@
     }
 
     .dc-copyright {
-     margin-top: 2rem;
+     margin-top: 3.21rem;
     }
 
     a {

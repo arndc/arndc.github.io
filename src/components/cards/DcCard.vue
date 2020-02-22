@@ -68,8 +68,9 @@
     }
 
     .dc-content {
-      color: $text-light;
       font-size: 1.1rem;
+      text-align: center;
+      color: $text-light;
     }
   }
 </style>

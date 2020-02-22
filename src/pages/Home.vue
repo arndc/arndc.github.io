@@ -3,8 +3,8 @@
     <transition name="fade" mode="out-in">>
       <dc-loading-screen v-if="isLoading" />
       <main v-else>
-        <dc-landing :background-image-src="backgroundImageSrc" />
-        <dc-about-me />
+        <dc-landing :background-image-src="backgroundImageSrc" @next-section="scrollToSection('.dc-about-me')" />
+        <dc-about-me class="dc-about-me" />
       </main>
     </transition>
   </div>
@@ -15,6 +15,7 @@
     import DcAboutMe from '@/components/DcAboutMe.vue';
     import DcLanding from '@/components/DcLanding.vue';
     import DcLoadingScreen from '@/components/loading/DcLoadingScreen.vue';
+    import jump from 'jump.js';
     import { Component, Vue } from 'vue-property-decorator';
 
     @Component({
@@ -38,6 +39,10 @@
             img.onload = () => this.isLoading = false;
             img.src = require('@/assets/images/backgrounds/mountains.jpg');
             this.backgroundImageSrc = img.src;
+        }
+
+        scrollToSection(section: string): void {
+            jump(section);
         }
 
     }
