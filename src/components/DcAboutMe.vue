@@ -78,13 +78,15 @@
 <style lang="scss" scoped>
   main {
     background: url('../assets/images/backgrounds/foggy-mountains.png') no-repeat,
-    linear-gradient(180deg, rgba(221, 228, 238, 1) 0%, rgba(173, 187, 203, 0.7399334733893557) 33%, rgba(221, 228, 238, 1) 85%);
+    linear-gradient(180deg, $background 0%, opacify($background-darker, 0.7399334733893557) 33%, $background 85%);
     background-size: contain;
+    padding-bottom: 3.2rem;
 
     @media only screen and (min-width: $widescreen) {
       background: url('../assets/images/backgrounds/foggy-mountains-widescreen.png') no-repeat center top,
-      linear-gradient(180deg, rgba(221, 228, 238, 1) 0%, rgba(173, 187, 203, 1) 35%, rgba(221, 228, 238, 1) 85%);
+      linear-gradient(180deg, $background 0%, $background-darker 35%, $background 85%);
       background-size: contain;
+      padding-bottom: 6.4rem;
     }
 
     .dc-section {
