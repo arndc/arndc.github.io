@@ -3,25 +3,22 @@
     <section class="hero-body container">
       <h1 class="dc-logo" data-aos="zoom-out" data-aos-duration="1800">ARNE<small>.</small>DC</h1>
     </section>
-    <div class="dc-scroll">
-      <div class="dc-scroll-content" @click="onClickChevron">
-        <font-awesome-icon class="dc-icon" :icon="['fa', 'chevron-down']" />
-      </div>
-    </div>
+    <dc-section-scroller next-section-name="about me" next-section-selector="#dc-about-me" pulse="true" />
   </main>
 </template>
 
 <script lang="ts">
 
-    import { Component, Emit, Prop, Vue } from 'vue-property-decorator';
+    import DcSectionScroller from '@/components/DcSectionScroller.vue';
+    import { Component, Prop, Vue } from 'vue-property-decorator';
 
-    @Component
+    @Component({
+        components: { DcSectionScroller }
+    })
     export default class DcLanding extends Vue {
 
         @Prop() backgroundImageSrc?: string;
 
-        @Emit('next-section')
-        onClickChevron(): void {}
     }
 
 </script>
